@@ -1205,6 +1205,7 @@ function getScaleformSettings(standalone) {
 	var scaleXInput = document.getElementById('scaleform-scale-x');
 	var scaleYInput = document.getElementById('scaleform-scale-y');
 	var attachedInput = document.getElementById('scaleform-attached');
+	var holographicInput = document.getElementById('scaleform-attached');
 
 	var name = nameInput.value;
 	var posX = parseFloat(posXInput.value);
@@ -1216,6 +1217,7 @@ function getScaleformSettings(standalone) {
 	var scaleX = parseFloat(scaleXInput.value);
 	var scaleY = parseFloat(scaleYInput.value);
 	var attached = attachedInput.checked;
+	var holographic = holographicInput.checked;
 
 	if (name == '') {
 		name = null;
@@ -1271,7 +1273,8 @@ function getScaleformSettings(standalone) {
 			z: 0
 		},
 		standalone: standalone,
-		attached: attached
+		attached: attached,
+		holographic: holographic
 	};
 }
 
