@@ -1205,7 +1205,7 @@ function getScaleformSettings(standalone) {
 	var scaleXInput = document.getElementById('scaleform-scale-x');
 	var scaleYInput = document.getElementById('scaleform-scale-y');
 	var attachedInput = document.getElementById('scaleform-attached');
-	var holographicInput = document.getElementById('scaleform-attached');
+	var holographicInput = document.getElementById('scaleform-holographic');
 
 	var name = nameInput.value;
 	var posX = parseFloat(posXInput.value);
@@ -1472,6 +1472,7 @@ function setMediaPlayerDefaults(handle) {
 			document.getElementById('scaleform-scale-x').value = scaleform.scale.x;
 			document.getElementById('scaleform-scale-y').value = scaleform.scale.y;
 			document.getElementById('scaleform-attached').checked = scaleform.attached;
+			document.getElementById('scaleform-holographic').checked = scaleform.holographic;
 
 			document.getElementById('scaleform').checked = true;
 			document.getElementById('scaleform-settings').style.display = 'grid';
@@ -1880,7 +1881,8 @@ window.addEventListener('load', () => {
 			document.getElementById('scaleform-rotation-x').value = data.rotation.x;
 			document.getElementById('scaleform-rotation-y').value = data.rotation.y;
 			document.getElementById('scaleform-rotation-z').value = data.rotation.z;
-			document.getElementById('scaleform-attached').checked = false;
+			document.getElementById('scaleform-attached').checked = !!data.attached;
+			document.getElementById('scaleform-holographic').checked = !!data.holographic;
 		});
 	});
 
@@ -1901,7 +1903,8 @@ window.addEventListener('load', () => {
 			document.getElementById('scaleform-rotation-x').value = data.rotation.x;
 			document.getElementById('scaleform-rotation-y').value = data.rotation.y;
 			document.getElementById('scaleform-rotation-z').value = data.rotation.z;
-			document.getElementById('scaleform-attached').checked = false;
+			document.getElementById('scaleform-attached').checked = !!data.attached;
+			document.getElementById('scaleform-holographic').checked = !!data.holographic;
 		});
 	});
 

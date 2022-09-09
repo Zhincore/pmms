@@ -257,8 +257,8 @@ function DuiBrowser:renderFrame(drawSprite)
 			DrawScaleformMovie_3d(self.sfHandle,
 			self.scaleform.finalPosition or self.scaleform.position,
 			self.scaleform.finalRotation or self.scaleform.rotation,
-			1.0, 1.0, 1.0,
-			self.scaleform.scale.x, self.scaleform.scale.y * (Config.dui.screenHeight / Config.dui.screenWidth), 1,
+			0.0, 0.0, 0.0,
+			self.scaleform.scale.x, -self.scaleform.scale.y * (Config.dui.screenHeight / Config.dui.screenWidth), 1,
 			2)
 		else
 			DrawScaleformMovie_3dSolid(self.sfHandle,

@@ -56,6 +56,7 @@ input[type="checkbox"] {
 	width: 1vw;
 	border: 1px solid white;
 	vertical-align: middle;
+	margin-right: 0.5vw;
 }
 
 input[type="checkbox"]:checked {
@@ -342,7 +343,7 @@ mediaelementwrapper > video {
 	grid-column: 2;
 }
 
-#scaleform-attached-container {
+#scaleform-attached-container, #scaleform-holographic-container {
 	text-align: center;
 }
 
